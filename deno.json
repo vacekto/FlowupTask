@@ -1,6 +1,26 @@
 {
     "tasks": {
-        "dev": "denon run --allow-net --allow-env --allow-read app.ts",
-        "prod": "deno run --allow-net --allow-env --allow-read app.ts"
+        "dev": "denon run --allow-net --allow-env --allow-read --allow-sys src/index.ts",
+        "prod": "deno run --allow-net --allow-env --allow-read --allow-sys src/index.ts"
+    },
+    "imports": {
+        "typeorm": "npm:typeorm@^0.3.20",
+        "express": "npm:express@4.21.1"
+    },
+    "lint": {
+        "include": ["src/"],
+        "rules": {
+            "tags": ["recommended"],
+            "include": ["ban-untagged-todo"],
+            "exclude": ["no-unused-vars"]
+        }
+    },
+    "fmt": {
+        "useTabs": true,
+        "lineWidth": 80,
+        "indentWidth": 2,
+        "semiColons": true,
+        "proseWrap": "preserve",
+        "include": ["src/"]
     }
 }
