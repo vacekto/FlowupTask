@@ -1,11 +1,17 @@
 {
     "tasks": {
-        "dev": "denon run --allow-net --allow-env --allow-read --allow-sys src/index.ts",
-        "prod": "deno run --allow-net --allow-env --allow-read --allow-sys src/index.ts"
+        "dev": "denon run --allow-net --allow-env  --allow-read --allow-sys --unstable src/index.ts",
+        "prod": "deno run --allow-net --allow-env --allow-read --allow-sys --unstable src/index.ts"
     },
     "imports": {
         "typeorm": "npm:typeorm@^0.3.20",
+        "mongodb": "npm:mongodb@^4.4.0",
         "express": "npm:express@4.21.1"
+    },
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "strict": true
     },
     "lint": {
         "include": ["src/"],

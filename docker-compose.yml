@@ -17,3 +17,5 @@ services:
     image: mongo
     container_name: "time_tracker_DB"
     restart: always
+    ports:
+      - "27017:27017"

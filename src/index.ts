@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import { SERVER_PORT } from "./config.ts";
-import { connectToDB } from "./database.ts";
+import { connectToDB } from "./MongoDB/config/connect.ts";
 
 const app = express();
 
