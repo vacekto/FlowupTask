@@ -1,5 +1,5 @@
 import { DataSource } from "typeorm";
-import { MONGO_HOST, MONGO_PORT } from "../../config.ts";
+import { MONGO_HOST, MONGO_PORT } from "../../serverConfig.ts";
 import { User } from "../entities/User.ts";
 
 export const AppDataSource = new DataSource({

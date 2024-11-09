@@ -1,12 +1,14 @@
 {
     "tasks": {
-        "dev": "denon run --allow-net --allow-env  --allow-read --allow-sys --unstable src/index.ts",
-        "prod": "deno run --allow-net --allow-env --allow-read --allow-sys --unstable src/index.ts"
+        "dev": "denon run --allow-net --allow-env  --allow-read --allow-sys --unstable src/main.ts",
+        "prod": "deno run --allow-net --allow-env --allow-read --allow-sys --unstable src/main.ts"
     },
     "imports": {
+        "express-types": "npm:@types/express@^5.0.0",
         "typeorm": "npm:typeorm@^0.3.20",
         "mongodb": "npm:mongodb@^4.4.0",
-        "express": "npm:express@4.21.1"
+        "express": "npm:express@4.21.1",
+        "zod": "https://deno.land/x/zod@v3.23.8/mod.ts"
     },
     "compilerOptions": {
         "experimentalDecorators": true,
