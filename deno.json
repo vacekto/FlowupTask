@@ -3,24 +3,28 @@
         "dev": "denon run --allow-net --allow-env  --allow-read --allow-sys --unstable src/main.ts",
         "prod": "deno run --allow-net --allow-env --allow-read --allow-sys --unstable src/main.ts"
     },
-    "imports": {
-        "express-types": "npm:@types/express@^5.0.0",
-        "typeorm": "npm:typeorm@^0.3.20",
-        "mongodb": "npm:mongodb@^4.4.0",
-        "express": "npm:express@4.21.1",
-        "zod": "https://deno.land/x/zod@v3.23.8/mod.ts"
-    },
+    "importMap": "./import_map.json",
     "compilerOptions": {
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "strict": true
+        "strict": true,
+        "noImplicitAny": false
     },
     "lint": {
-        "include": ["src/"],
+        "include": [
+            "src/"
+        ],
         "rules": {
-            "tags": ["recommended"],
-            "include": ["ban-untagged-todo"],
-            "exclude": ["no-unused-vars"]
+            "tags": [
+                "recommended"
+            ],
+            "include": [
+                "ban-untagged-todo"
+            ],
+            "exclude": [
+                "no-unused-vars",
+                "no-explicit-any"
+            ]
         }
     },
     "fmt": {
@@ -29,6 +33,8 @@
         "indentWidth": 2,
         "semiColons": true,
         "proseWrap": "preserve",
-        "include": ["src/"]
+        "include": [
+            "src/"
+        ]
     }
 }

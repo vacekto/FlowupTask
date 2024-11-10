@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "oak": "https://deno.land/x/oak@v17.1.3/mod.ts",
+    "typeorm": "npm:typeorm@^0.3.20",
+    "mongodb": "npm:mongodb@^4.4.0",
+    "zod": "https://deno.land/x/zod@v3.23.8/mod.ts"
+  }
+}

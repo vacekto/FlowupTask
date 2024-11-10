@@ -5,6 +5,6 @@ export const connectToDB = async () => {
         await AppDataSource.initialize();
         console.log("connected to DB successfully");
     } catch (err) {
-        console.log("database connection error: ", err);
+        console.error("database connection unsuccessful: ", err);
     }
 };
