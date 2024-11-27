@@ -1,0 +1,40 @@
+{"region":"production","ts":"2024-11-19T15:59:58.626Z","level":"INFO","data":"123456"}
+{"region":"production","ts":"2024-11-19T15:59:58.629Z","level":"WARN","data":"true"}
+{"region":"production","ts":"2024-11-19T15:59:58.630Z","level":"ERROR","data":"{}"}
+{"region":"production","ts":"2024-11-19T15:59:58.630Z","level":"CRITICAL","data":"500 Internal server error"}
+{"region":"production","ts":"2024-11-19T16:01:22.810Z","level":"INFO","data":"123456"}
+{"region":"production","ts":"2024-11-19T16:01:22.811Z","level":"WARN","data":"true"}
+{"region":"production","ts":"2024-11-19T16:01:22.811Z","level":"ERROR","data":"{}"}
+{"region":"production","ts":"2024-11-19T16:01:22.811Z","level":"CRITICAL","data":"500 Internal server error"}
+{"region":"production","ts":"2024-11-19T16:01:26.327Z","level":"INFO","data":"123456"}
+{"region":"production","ts":"2024-11-19T16:01:26.327Z","level":"WARN","data":"true"}
+{"region":"production","ts":"2024-11-19T16:01:26.328Z","level":"ERROR","data":"{}"}
+{"region":"production","ts":"2024-11-19T16:01:26.328Z","level":"CRITICAL","data":"500 Internal server error"}
+{"region":"production","ts":"2024-11-19T16:01:28.438Z","level":"INFO","data":"123456"}
+{"region":"production","ts":"2024-11-19T16:01:28.438Z","level":"WARN","data":"true"}
+{"region":"production","ts":"2024-11-19T16:01:28.438Z","level":"ERROR","data":"{}"}
+{"region":"production","ts":"2024-11-19T16:01:28.438Z","level":"CRITICAL","data":"500 Internal server error"}
+{"region":"production","ts":"2024-11-19T16:01:31.602Z","level":"INFO","data":"123456"}
+{"region":"production","ts":"2024-11-19T16:01:31.603Z","level":"WARN","data":"true"}
+{"region":"production","ts":"2024-11-19T16:01:31.603Z","level":"ERROR","data":"{}"}
+{"region":"production","ts":"2024-11-19T16:01:31.603Z","level":"CRITICAL","data":"500 Internal server error"}
+{"region":"production","ts":"2024-11-19T16:01:42.626Z","level":"INFO","data":"123456"}
+{"region":"production","ts":"2024-11-19T16:01:42.626Z","level":"WARN","data":"true"}
+{"region":"production","ts":"2024-11-19T16:01:42.626Z","level":"ERROR","data":"{}"}
+{"region":"production","ts":"2024-11-19T16:01:42.626Z","level":"CRITICAL","data":"500 Internal server error"}
+{"region":"production","ts":"2024-11-19T16:02:00.888Z","level":"INFO","data":"123456"}
+{"region":"production","ts":"2024-11-19T16:02:00.888Z","level":"WARN","data":"true"}
+{"region":"production","ts":"2024-11-19T16:02:00.888Z","level":"ERROR","data":"{}"}
+{"region":"production","ts":"2024-11-19T16:02:00.888Z","level":"CRITICAL","data":"500 Internal server error"}
+{"region":"production","ts":"2024-11-19T17:30:23.869Z","level":"INFO","data":"123456"}
+{"region":"production","ts":"2024-11-19T17:30:23.869Z","level":"WARN","data":"true"}
+{"region":"production","ts":"2024-11-19T17:30:23.869Z","level":"ERROR","data":"{}"}
+{"region":"production","ts":"2024-11-19T17:30:23.869Z","level":"CRITICAL","data":"500 Internal server error"}
+{"ts":"2024-11-19T17:30:42.140Z","level":"INFO","data":"123456"}
+{"ts":"2024-11-19T17:30:42.140Z","level":"WARN","data":"true"}
+{"ts":"2024-11-19T17:30:42.141Z","level":"ERROR","data":"{}"}
+{"ts":"2024-11-19T17:30:42.141Z","level":"CRITICAL","data":"500 Internal server error"}
+{"ts":"2024-11-19T17:33:58.201Z","level":"INFO","data":"123456"}
+{"ts":"2024-11-19T17:33:58.202Z","level":"WARN","data":"true"}
+{"ts":"2024-11-19T17:33:58.202Z","level":"ERROR","data":"{}"}
+{"ts":"2024-11-19T17:33:58.202Z","level":"CRITICAL","data":"500 Internal server error"}

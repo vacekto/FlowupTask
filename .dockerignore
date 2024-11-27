@@ -2,3 +2,4 @@ Dockerfile
 docker-compose.yml
 .vscode
 .env
+node_modules
