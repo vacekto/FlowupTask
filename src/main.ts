@@ -1,8 +1,8 @@
 import { Application } from "oak";
-import { ENV, SERVER_PORT } from "./constants.ts";
 import { errorMiddleware } from "./middleware/errorHandler.ts";
 import { connectToMongoDB } from "./MongoDB/MongoConfig.ts";
 import appRouter from "./routes/appRouter.ts";
+import serverConfig from "./serverConfig.ts";
 import logger from "./util/logger.ts";
 
 self.addEventListener("error", (err) => {
@@ -20,9 +20,9 @@ app.use(appRouter.routes());
 
 await connectToMongoDB();
 
-app.listen({ port: SERVER_PORT }).catch((err) => {
+app.listen({ port: serverConfig.SERVER_PORT }).catch((err) => {
 	logger.critical("Failed to start the server:", err);
 	Deno.exit(1);
 });
 
-logger.debug(`Server running in ${ENV}`);
+logger.debug(`Server running in mode: ${serverConfig.ENV}`);

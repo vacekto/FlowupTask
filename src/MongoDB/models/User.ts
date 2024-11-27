@@ -1,9 +1,9 @@
-import { MONGO_DB_NAME } from "../../constants.ts";
+import serverConfig from "../../serverConfig.ts";
 import { MongoDBClient } from "../MongoConfig.ts";
 
-const USER_COLLECTION_NAME = "scosikdosi";
+const USER_COLLECTION_NAME = "cosikdosi";
 
-const db = MongoDBClient.db(MONGO_DB_NAME);
+const db = MongoDBClient.db(serverConfig.MONGO_DB_NAME);
 const users = db.collection(USER_COLLECTION_NAME);
 
 class User {

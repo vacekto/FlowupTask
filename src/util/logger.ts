@@ -1,6 +1,6 @@
 import { ensureDirSync } from "@std/fs";
 import * as log from "@std/log";
-import { ENV } from "../constants.ts";
+import serverConfig from "../serverConfig.ts";
 
 await log.setup({
     handlers: {
@@ -33,7 +33,7 @@ await log.setup({
 
 ensureDirSync("./logs");
 
-const logger = log.getLogger(ENV);
+const logger = log.getLogger(serverConfig.ENV);
 if (logger.handlers.length === 0) {
     console.error(`NO LOGGER REGISTERED !!!`);
 }
