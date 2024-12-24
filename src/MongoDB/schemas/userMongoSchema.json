@@ -1,0 +1,38 @@
+{
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "required": [
+        "name",
+        "email",
+        "password"
+      ],
+      "properties": {
+        "name": {
+          "bsonType": "string",
+          "description": "must be a string and is required"
+        },
+        "age": {
+          "bsonType": "int",
+          "minimum": 0,
+          "maximum": 120,
+          "description": "must be an integer between 0 and 120 and is required"
+        },
+        "email": {
+          "bsonType": "string",
+          "pattern": "^.+@.+\\..+$",
+          "description": "must be a string and match the regular expression pattern"
+        },
+        "password": {
+          "bsonType": "string",
+          "description": "is required"
+        },
+        "test": {
+          "bsonType": "object",
+          "required": [],
+          "properties": {}
+        }
+      }
+    }
+  }
+}

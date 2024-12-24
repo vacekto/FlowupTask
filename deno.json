@@ -1,9 +1,13 @@
 {
-    "tasks": {
-        "dev": "denon run --allow-net --allow-env  --allow-read --allow-write --allow-sys --unstable src/main.ts",
-        "prod": "deno run --allow-net --allow-env --allow-read --allow-write --allow-sys --unstable src/main.ts"
+    "nodeModulesDir": "auto",
+    "compilerOptions": {
+        "strict": true
     },
     "importMap": "./import_map.json",
+    "tasks": {
+        "dev": "deno run --allow-net --allow-env --allow-read --allow-write --allow-sys --allow-scripts --allow-ffi --watch src/main.ts",
+        "prod": "deno run --allow-net --allow-env --allow-read --allow-write --allow-sys --allow-scripts --allow-ffi src/main.ts"
+    },
     "lint": {
         "include": [
             "src/"
@@ -22,7 +26,7 @@
         }
     },
     "fmt": {
-        "singleQuote": false,
+        "singleQuote": true,
         "useTabs": true,
         "lineWidth": 80,
         "indentWidth": 2,

@@ -1,10 +1,19 @@
 FROM denoland/deno:alpine
 
+#  using bcrypt from npm requires gcc and musl-dev installed
+RUN apk update && apk add --no-cache \
+gcc \
+musl-dev 
+# libc-dev \
+# make \
+# git \
+# curl
+
 WORKDIR /app
 
 COPY . .
 
-RUN deno install -qAf --global --unstable https://deno.land/x/denon/denon.ts
+# RUN musl-gcc -shared -o libexample.so -fPIC example.c
 
 EXPOSE 8000
 

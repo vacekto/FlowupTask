@@ -4,6 +4,8 @@
     "mongodb": "npm:mongodb@^6",
     "zod": "https://deno.land/x/zod@v3.23.8/mod.ts",
     "@std/log": "jsr:@std/log",
-    "@std/fs": "jsr:@std/fs"
+    "@std/fs": "jsr:@std/fs",
+    "bcrypt": "https://deno.land/x/bcrypt@v0.3.0/mod.ts",
+    "djwt": "https://deno.land/x/djwt@v2.4/mod.ts"
   }
 }

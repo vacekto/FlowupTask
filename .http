@@ -1,7 +1,57 @@
-POST http://localhost:3000/api/users/createUser HTTP/1.1
+POST http://localhost:3000/createUser HTTP/1.1
 content-type: application/json
 
 {
-    "name": "sample",
-    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+    "name": "magic turtle",
+    "email": "hahaha",
+    "password": "cosikdosi password"
+}
+
+###
+POST http://localhost:3000/generateToken HTTP/1.1
+content-type: application/json
+
+{
+    "email": "hahaha",
+    "password": "cosikdosi password"
+}
+
+
+###
+POST http://localhost:3000/createProject HTTP/1.1
+content-type: application/json
+token: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhhaGFoYSIsImlkIjoiOWM3MWMzNDgtYWM2Ni00N2MwLWI5ODUtZTk2MmUxMWQ0YWZjIiwidXNlcm5hbWUiOiJtYWdpYyB0dXJ0bGUifQ.1wJCQEqyTlp627KCiKcm6z5fLZ5Br9JAfDFZpu7XUPlMWpolWsrW2fNkKXLdw_d2JRQA4HbcXApFwvNZSIRd1w
+
+{
+    "projectName": "dalsi project"
+}
+
+###
+POST http://localhost:3000/createTask HTTP/1.1
+content-type: application/json
+token: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhhaGFoYSIsImlkIjoiOWM3MWMzNDgtYWM2Ni00N2MwLWI5ODUtZTk2MmUxMWQ0YWZjIiwidXNlcm5hbWUiOiJtYWdpYyB0dXJ0bGUifQ.1wJCQEqyTlp627KCiKcm6z5fLZ5Br9JAfDFZpu7XUPlMWpolWsrW2fNkKXLdw_d2JRQA4HbcXApFwvNZSIRd1w
+
+{
+    "taskName": "dalsi task",
+    "projectId": "551e6ba2-55c9-4361-b0a2-c6f7d529357b"
+}
+
+###
+POST http://localhost:3000/startTask HTTP/1.1
+content-type: application/json
+token: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhhaGFoYSIsImlkIjoiOWM3MWMzNDgtYWM2Ni00N2MwLWI5ODUtZTk2MmUxMWQ0YWZjIiwidXNlcm5hbWUiOiJtYWdpYyB0dXJ0bGUifQ.1wJCQEqyTlp627KCiKcm6z5fLZ5Br9JAfDFZpu7XUPlMWpolWsrW2fNkKXLdw_d2JRQA4HbcXApFwvNZSIRd1w
+
+{
+    "taskId": "791d9d04-4f6c-497d-81a6-d2ba372a46d2",
+    "projectId": "551e6ba2-55c9-4361-b0a2-c6f7d529357b"
+}
+
+###
+POST http://localhost:3000/stopTask HTTP/1.1
+content-type: application/json
+token: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhhaGFoYSIsImlkIjoiOWM3MWMzNDgtYWM2Ni00N2MwLWI5ODUtZTk2MmUxMWQ0YWZjIiwidXNlcm5hbWUiOiJtYWdpYyB0dXJ0bGUifQ.1wJCQEqyTlp627KCiKcm6z5fLZ5Br9JAfDFZpu7XUPlMWpolWsrW2fNkKXLdw_d2JRQA4HbcXApFwvNZSIRd1w
+
+{
+    "taskId": "791d9d04-4f6c-497d-81a6-d2ba372a46d2",
+    "projectId": "551e6ba2-55c9-4361-b0a2-c6f7d529357b"
 }

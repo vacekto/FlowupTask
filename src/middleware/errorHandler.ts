@@ -1,24 +1,26 @@
-// import { processCustomServerError } from "../util/functions.ts";
+import { type Middleware } from 'oak';
+import serverConfig from '../serverConfig.ts';
+import logger from '../util/logger.ts';
 
-import CustomServerError from "../util/errorClasses/CustomError.ts";
-import { TOakMiddleware } from "../util/types/index.ts";
-
-export const errorMiddleware: TOakMiddleware = async (ctx, next) => {
+export const errorMiddleware: Middleware = async (ctx, next) => {
     try {
         await next();
-    } catch (err) {
-        // if (Deno.env.get("ENV") === "production") {
-        ctx.response.status = 500;
-        ctx.response.body = { error: "Internal Server Error" };
-        // log error
-        // return;
-        // }
+    } catch (error) {
+        const logObj = {
+            msg: '',
+            url: ctx.request.url,
+            error,
+        };
 
-        if (!(err instanceof CustomServerError)) {
-            next();
+        logger.error(logObj);
+
+        if (serverConfig.ENV === 'production') {
+            ctx.response.status = 500;
+            ctx.response.body = { error: 'Internal Server Error' };
+            // next();
+            return;
         }
 
-        // console.log("error chycen");
-        // res.status(err.statusCode).send(processCustomServerError(err));
+        ctx.response.body = logObj;
     }
 };
